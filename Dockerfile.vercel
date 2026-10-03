@@ -1,0 +1,13 @@
+FROM dunglas/frankenphp:php8.3-bookworm
+
+WORKDIR /app
+
+COPY . /app
+
+RUN docker-php-ext-install mysqli pdo_mysql
+
+ENV SERVER_NAME=:80
+
+RUN printf ':80 {\n    root * /app\n    php_server\n    file_server\n}\n' > /etc/caddy/Caddyfile
+
+CMD ["sh", "-c", "SERVER_NAME=:$PORT frankenphp run --config /etc/caddy/Caddyfile --adapter caddyfile"]

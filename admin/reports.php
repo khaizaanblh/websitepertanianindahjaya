@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once "../includes/auth.php";
 require_admin();
@@ -7,7 +7,7 @@ require_once "../config/database.php";
 
 $title = "Laporan Penjualan";
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 
 /*
@@ -2087,7 +2087,7 @@ require "../includes/header.php";
                                     !== "active"
                                 ): ?>
 
-                                    — Nonaktif
+                                    â€” Nonaktif
 
                                 <?php endif; ?>
 
@@ -2173,7 +2173,7 @@ require "../includes/header.php";
                                     )
                                 ): ?>
 
-                                    —
+                                    â€”
                                     <?= esc(
                                         $cashier["branch_name"]
                                     ) ?>
@@ -2340,7 +2340,7 @@ require "../includes/header.php";
                             $history_branch_name
                         ) ?>
 
-                        ·
+                        Â·
 
                         <?= number_format(
                             $history_count,
@@ -2613,7 +2613,7 @@ require "../includes/header.php";
                                     <div
                                         class="report-empty-icon"
                                     >
-                                        —
+                                        â€”
                                     </div>
 
                                     <strong>
@@ -2822,7 +2822,7 @@ require "../includes/header.php";
                     <div
                         class="report-empty-icon"
                     >
-                        —
+                        â€”
                     </div>
 
                     <strong>

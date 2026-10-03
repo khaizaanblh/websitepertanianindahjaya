@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../includes/auth.php";
 
@@ -8,7 +8,7 @@ require_once __DIR__ . "/../config/database.php";
 
 $title = "Riwayat Transaksi";
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $message = $_GET["message"] ?? "";
 $error   = $_GET["error"] ?? "";
@@ -2171,7 +2171,7 @@ require __DIR__ . "/../includes/header.php";
 
     <div class="history-alert success">
 
-        ✓
+        âœ“
 
         <?= e($message) ?>
 
@@ -2489,7 +2489,7 @@ require __DIR__ . "/../includes/header.php";
         <div class="history-empty">
 
             <div class="history-empty-icon">
-                🧾
+                ðŸ§¾
             </div>
 
             <h3>
@@ -2653,7 +2653,7 @@ require __DIR__ . "/../includes/header.php";
                                             color:var(--muted);
                                         "
                                     >
-                                        —
+                                        â€”
                                     </span>
 
                                 <?php endif; ?>
@@ -2701,7 +2701,7 @@ require __DIR__ . "/../includes/header.php";
 
                                 <?php else: ?>
 
-                                    —
+                                    â€”
 
                                 <?php endif; ?>
 
@@ -2753,7 +2753,7 @@ require __DIR__ . "/../includes/header.php";
     <div class="history-info-card">
 
         <strong>
-            💵 Pembayaran Tunai
+            ðŸ’µ Pembayaran Tunai
         </strong>
 
         <span>
@@ -2767,7 +2767,7 @@ require __DIR__ . "/../includes/header.php";
     <div class="history-info-card">
 
         <strong>
-            💳 Debit
+            ðŸ’³ Debit
         </strong>
 
         <span>
@@ -2782,7 +2782,7 @@ require __DIR__ . "/../includes/header.php";
     <div class="history-info-card">
 
         <strong>
-            🏦 Transfer
+            ðŸ¦ Transfer
         </strong>
 
         <span>
@@ -2849,7 +2849,7 @@ require __DIR__ . "/../includes/header.php";
                     onclick="closeDetail()"
                     aria-label="Tutup"
                 >
-                    ×
+                    Ã—
                 </button>
 
             </div>
@@ -2897,7 +2897,7 @@ require __DIR__ . "/../includes/header.php";
                 <div class="transaction-modal-title">
 
                     <div class="transaction-modal-icon">
-                        🧾
+                        ðŸ§¾
                     </div>
 
                     <div>
@@ -2923,7 +2923,7 @@ require __DIR__ . "/../includes/header.php";
                     onclick="closeDetail()"
                     aria-label="Tutup"
                 >
-                    ×
+                    Ã—
                 </button>
 
             </div>
@@ -2995,7 +2995,7 @@ require __DIR__ . "/../includes/header.php";
 
                             <?php else: ?>
 
-                                —
+                                â€”
 
                             <?php endif; ?>
 
@@ -3104,7 +3104,7 @@ require __DIR__ . "/../includes/header.php";
                                                 )
                                             ): ?>
 
-                                                •
+                                                â€¢
                                                 <?= e(
                                                     $item["barcode"]
                                                 ) ?>
@@ -3342,7 +3342,7 @@ require __DIR__ . "/../includes/header.php";
                         class="btn primary"
                         onclick="printTransaction()"
                     >
-                        🖨 Cetak Struk
+                        ðŸ–¨ Cetak Struk
                     </button>
 
                 <?php endif; ?>
@@ -3472,3 +3472,4 @@ document.addEventListener(
 require __DIR__ . "/../includes/footer.php";
 
 ?>
+

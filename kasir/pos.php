@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../includes/auth.php";
 require_kasir();
@@ -6,7 +6,7 @@ require_kasir();
 require_once __DIR__ . "/../config/database.php";
 
 $title = "Kasir";
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $message = $_GET["message"] ?? "";
 $error = $_GET["error"] ?? "";
@@ -2490,7 +2490,7 @@ require __DIR__ . "/../includes/header.php";
         <div class="checkout-confirm-head">
 
             <div class="checkout-confirm-icon">
-                ✓
+                âœ“
             </div>
 
             <h3 id="checkoutConfirmTitle">
@@ -2618,7 +2618,7 @@ require __DIR__ . "/../includes/header.php";
         <div class="pos-search-wrap">
 
             <span class="pos-search-icon">
-                ⌕
+                âŒ•
             </span>
 
             <input
@@ -2637,7 +2637,7 @@ require __DIR__ . "/../includes/header.php";
                 onclick="clearProductSearch()"
                 title="Bersihkan"
             >
-                ×
+                Ã—
             </button>
 
         </div>
@@ -2749,13 +2749,13 @@ require __DIR__ . "/../includes/header.php";
                                     class="no-image"
                                     style="display:none;"
                                 >
-                                    📦
+                                    ðŸ“¦
                                 </span>
 
                             <?php else: ?>
 
                                 <span class="no-image">
-                                    📦
+                                    ðŸ“¦
                                 </span>
 
                             <?php endif; ?>
@@ -2889,7 +2889,7 @@ require __DIR__ . "/../includes/header.php";
                     >
 
                         <span class="payment-icon">
-                            💵
+                            ðŸ’µ
                         </span>
 
                         Tunai
@@ -2905,7 +2905,7 @@ require __DIR__ . "/../includes/header.php";
                     >
 
                         <span class="payment-icon">
-                            💳
+                            ðŸ’³
                         </span>
 
                         Debit
@@ -2921,7 +2921,7 @@ require __DIR__ . "/../includes/header.php";
                     >
 
                         <span class="payment-icon">
-                            🏦
+                            ðŸ¦
                         </span>
 
                         Transfer
@@ -3130,7 +3130,7 @@ require __DIR__ . "/../includes/header.php";
                 <div class="receipt-modal-head-left">
 
                     <div class="receipt-success-icon">
-                        ✓
+                        âœ“
                     </div>
 
                     <div>
@@ -3154,7 +3154,7 @@ require __DIR__ . "/../includes/header.php";
                     onclick="closeReceipt()"
                     aria-label="Tutup"
                 >
-                    ×
+                    Ã—
                 </button>
 
             </div>
@@ -3300,7 +3300,7 @@ require __DIR__ . "/../includes/header.php";
                                             $receipt_item["qty"] ?? 0
                                         ) ?>
 
-                                        ×
+                                        Ã—
 
                                         <?= rupiah(
                                             $receipt_item["price"] ?? 0
@@ -3506,7 +3506,7 @@ require __DIR__ . "/../includes/header.php";
                     class="receipt-btn primary"
                     onclick="printReceipt()"
                 >
-                    🖨 Cetak Struk
+                    ðŸ–¨ Cetak Struk
                 </button>
 
             </div>
@@ -3862,7 +3862,7 @@ function renderCart()
 
                                 <span class="pos-cart-price">
                                     ${formatRupiah(item.price)}
-                                    × ${item.qty}
+                                    Ã— ${item.qty}
                                 </span>
 
                                 <div class="pos-cart-controls">
@@ -3872,7 +3872,7 @@ function renderCart()
                                         class="pos-qty-btn"
                                         onclick="changeQty(${item.id}, -1)"
                                     >
-                                        −
+                                        âˆ’
                                     </button>
 
                                     <span class="pos-qty">
@@ -4593,7 +4593,7 @@ function showToast(
         );
 
 
-    let icon = "✓";
+    let icon = "âœ“";
 
 
     if (type === "error") {
@@ -4645,7 +4645,7 @@ function showToast(
             class="pos-toast-close"
             aria-label="Tutup"
         >
-            ×
+            Ã—
         </button>
 
 

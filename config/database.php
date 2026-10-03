@@ -1,15 +1,17 @@
-<?php
+﻿<?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "kasir_pertanian";
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
+$database = getenv('DB_NAME') ?: 'kasir_pertanian';
+$port = getenv('DB_PORT') ?: 3306;
 
 $conn = new mysqli(
     $host,
     $user,
     $password,
-    $database
+    $database,
+    (int) $port
 );
 
 if ($conn->connect_error) {
@@ -17,3 +19,12 @@ if ($conn->connect_error) {
 }
 
 $conn->set_charset("utf8mb4");
+
+function get_base_url(): string
+{
+    if (getenv('VERCEL')) {
+        return '';
+    }
+
+    return '/kasir_pertanian';
+}

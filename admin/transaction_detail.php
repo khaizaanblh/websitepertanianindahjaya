@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once "../includes/auth.php";
 require_admin();
@@ -6,7 +6,7 @@ require_admin();
 require_once "../config/database.php";
 
 $title = "Detail Transaksi";
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 
 /*
@@ -801,7 +801,7 @@ require "../includes/header.php";
                 href="<?= $base_url ?>/admin/reports.php"
                 class="detail-btn"
             >
-                ← Kembali
+                â† Kembali
             </a>
 
 
@@ -810,7 +810,7 @@ require "../includes/header.php";
                 class="detail-btn primary"
                 onclick="window.print()"
             >
-                🖨 Cetak
+                ðŸ–¨ Cetak
             </button>
 
         </div>
@@ -913,7 +913,7 @@ require "../includes/header.php";
 
             <div class="info-card-value">
                 <?= $total_qty ?> item
-                ·
+                Â·
                 <?= $total_items ?> produk
             </div>
 

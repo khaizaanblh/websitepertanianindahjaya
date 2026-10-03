@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../config/database.php";
 require_once __DIR__ . "/../includes/auth.php";
@@ -1128,7 +1128,7 @@ require_once __DIR__ . "/../includes/header.php";
     <?php if ($message): ?>
 
         <div class="alert-success">
-            ✓ <?= htmlspecialchars($message) ?>
+            âœ“ <?= htmlspecialchars($message) ?>
         </div>
 
     <?php endif; ?>
@@ -1137,7 +1137,7 @@ require_once __DIR__ . "/../includes/header.php";
     <?php if ($error): ?>
 
         <div class="alert-error">
-            ⚠ <?= htmlspecialchars($error) ?>
+            âš  <?= htmlspecialchars($error) ?>
         </div>
 
     <?php endif; ?>
@@ -1152,7 +1152,7 @@ require_once __DIR__ . "/../includes/header.php";
         <div class="branch-info">
 
             <div class="branch-icon">
-                🏪
+                ðŸª
             </div>
 
             <div>
@@ -1218,7 +1218,7 @@ require_once __DIR__ . "/../includes/header.php";
         <?php else: ?>
 
             <div class="branch-locked">
-                🔒 Cabang akun kasir
+                ðŸ”’ Cabang akun kasir
             </div>
 
         <?php endif; ?>
@@ -1294,7 +1294,7 @@ require_once __DIR__ . "/../includes/header.php";
             </div>
 
             <div class="desc">
-                Penjualan tunai + kas masuk − kas keluar
+                Penjualan tunai + kas masuk âˆ’ kas keluar
             </div>
 
         </div>
@@ -1716,7 +1716,7 @@ require_once __DIR__ . "/../includes/header.php";
                                     <?php if ($row['type'] === 'out'): ?>
 
                                         <span class="amount-out">
-                                            − <?= rupiah($row['amount']) ?>
+                                            âˆ’ <?= rupiah($row['amount']) ?>
                                         </span>
 
                                     <?php else: ?>

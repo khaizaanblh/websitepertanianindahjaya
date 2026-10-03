@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once "../includes/auth.php";
 
@@ -8,7 +8,7 @@ require_once "../config/database.php";
 
 $title = "Pengguna";
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $message = "";
 $error = "";
@@ -1088,7 +1088,7 @@ require "../includes/header.php";
 }
 
 .branch-badge::before {
-    content: "⌂";
+    content: "âŒ‚";
     font-size: 10px;
 }
 
@@ -1308,7 +1308,7 @@ require "../includes/header.php";
 
         <div class="user-alert success">
 
-            ✓
+            âœ“
             <?= htmlspecialchars($message) ?>
 
         </div>
@@ -1943,7 +1943,7 @@ require "../includes/header.php";
                 class="user-modal-close"
                 onclick="closeEditModal()"
             >
-                ×
+                Ã—
             </button>
 
         </div>

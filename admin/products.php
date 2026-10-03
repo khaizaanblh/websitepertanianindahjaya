@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../config/database.php";
 require_once __DIR__ . "/../includes/auth.php";
 
 require_admin();
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $message = "";
 $error   = "";
@@ -2019,7 +2019,7 @@ body {
 }
 
 /* =========================================================
-   MODAL — fallback lengkap agar tidak mengacaukan layout
+   MODAL â€” fallback lengkap agar tidak mengacaukan layout
 ========================================================= */
 
 .modal {
@@ -2204,7 +2204,7 @@ body {
 
 <style>
 /* =========================================================
-   PROFESSIONAL PRODUCTS UI — FINAL OVERRIDE
+   PROFESSIONAL PRODUCTS UI â€” FINAL OVERRIDE
    Tidak mengubah PHP/backend; hanya merapikan tampilan,
    klik, tabel, aksi, dan modal.
 ========================================================= */
@@ -2642,7 +2642,7 @@ body:has(.modal.show) .sidebar {
             <div class="active-branch-info">
 
                 <div class="active-branch-icon">
-                    ●
+                    â—
                 </div>
 
                 <div>
@@ -3027,7 +3027,7 @@ body:has(.modal.show) .sidebar {
                                 <?php else: ?>
 
                                     <div class="product-thumb placeholder">
-                                        📦
+                                        ðŸ“¦
                                     </div>
 
                                 <?php endif; ?>
@@ -3271,7 +3271,7 @@ body:has(.modal.show) .sidebar {
                 class="modal-close"
                 onclick="closeModal('addProductModal')"
             >
-                ×
+                Ã—
             </button>
 
         </div>
@@ -3507,7 +3507,7 @@ body:has(.modal.show) .sidebar {
                 class="modal-close"
                 onclick="closeModal('stockModal')"
             >
-                ×
+                Ã—
             </button>
 
         </div>
@@ -3612,7 +3612,7 @@ body:has(.modal.show) .sidebar {
                 class="modal-close"
                 onclick="closeModal('editProductModal')"
             >
-                ×
+                Ã—
             </button>
 
         </div>
@@ -3743,7 +3743,7 @@ body:has(.modal.show) .sidebar {
                             class="current-image-placeholder"
                             id="currentImagePlaceholder"
                         >
-                            📦
+                            ðŸ“¦
                         </div>
 
 
@@ -3890,7 +3890,7 @@ body:has(.modal.show) .sidebar {
                 class="modal-close"
                 onclick="closeModal('productConfirmModal')"
             >
-                ×
+                Ã—
             </button>
 
         </div>
@@ -4182,7 +4182,7 @@ function showProductNotice(
 
     const icon =
         type === "success"
-            ? "✓"
+            ? "âœ“"
             : "!";
 
 
@@ -4206,7 +4206,7 @@ function showProductNotice(
         '</div>' +
 
         '<button type="button" class="product-notice-close">' +
-            "×" +
+            "Ã—" +
         '</button>';
 
 

@@ -1,10 +1,10 @@
-<?php
+﻿<?php
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $current_page = basename($_SERVER['PHP_SELF']);
 
@@ -564,7 +564,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
             aria-expanded="true"
             title="Kecilkan menu"
         >
-            ‹
+            â€¹
         </button>
 
 
@@ -640,7 +640,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
                 title="Dashboard"
             >
 
-                <span>▦</span>
+                <span>â–¦</span>
 
                 Dashboard
 
@@ -656,7 +656,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
         class="<?= $current_page === 'products.php' ? 'active' : '' ?>"
     >
 
-        <span>▣</span>
+        <span>â–£</span>
 
         Produk & Stok
 
@@ -670,7 +670,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
         class="<?= $current_page === 'users.php' ? 'active' : '' ?>"
     >
 
-        <span>♙</span>
+        <span>â™™</span>
 
         Pengguna
 
@@ -684,7 +684,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
         class="<?= $current_page === 'branches.php' ? 'active' : '' ?>"
     >
 
-        <span>⌂</span>
+        <span>âŒ‚</span>
 
         Manajemen Cabang
 
@@ -712,7 +712,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
         class="<?= $current_page === 'reports.php' ? 'active' : '' ?>"
     >
 
-        <span>▤</span>
+        <span>â–¤</span>
 
         Laporan & Transaksi
 
@@ -734,7 +734,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
                     title="Kasir"
                 >
 
-                    <span>🛒</span>
+                    <span>ðŸ›’</span>
 
                     Kasir
 
@@ -768,7 +768,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
                     title="Riwayat Transaksi"
                 >
 
-                    <span>↺</span>
+                    <span>â†º</span>
 
                     Riwayat Transaksi
 
@@ -785,7 +785,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
                     title="Shift & Rekap"
                 >
 
-                    <span>◷</span>
+                    <span>â—·</span>
 
                     Shift & Rekap
 
@@ -812,7 +812,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
                 title="Logout"
             >
 
-                <span>↪</span>
+                <span>â†ª</span>
 
                 Logout
 
@@ -849,7 +849,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
 
                 <div class="branch-badge">
 
-                    <span>⌂</span>
+                    <span>âŒ‚</span>
 
                     Cabang Aktif:
                     <?= htmlspecialchars($branch_name) ?>
@@ -883,7 +883,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
 
                     <small>
                         <?= ucfirst(htmlspecialchars($role)) ?>
-                        •
+                        â€¢
                         <?= htmlspecialchars($branch_name) ?>
                     </small>
 
@@ -932,7 +932,7 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
     {
 
         button.textContent =
-            collapsed ? '›' : '‹';
+            collapsed ? 'â€º' : 'â€¹';
 
         button.setAttribute(
             'aria-expanded',
@@ -1034,3 +1034,4 @@ $branch_name = $_SESSION['branch']['name'] ?? 'Cabang Utama';
 })();
 
 </script>
+

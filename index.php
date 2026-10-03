@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/config/database.php";
 require_once __DIR__ . "/includes/auth.php";
@@ -9,7 +9,7 @@ $role      = $_SESSION['user']['role'] ?? '';
 $user_id   = (int) ($_SESSION['user']['id'] ?? 0);
 $user_name = $_SESSION['user']['name'] ?? 'Kasir';
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 /* =========================================================
    CABANG AKTIF DARI SESSION LOGIN
@@ -2124,7 +2124,7 @@ require_once __DIR__ . "/includes/header.php";
 
         <div class="pos-alert pos-alert-success">
 
-            ✓
+            âœ“
 
             <span>
                 <?= esc($success_message) ?>
@@ -2176,7 +2176,7 @@ require_once __DIR__ . "/includes/header.php";
                             )
                         ) ?>
 
-                        · Kas awal
+                        Â· Kas awal
                         <?= rupiah(
                             $active_shift['opening_cash']
                         ) ?>
@@ -2378,13 +2378,13 @@ require_once __DIR__ . "/includes/header.php";
                                 class="pos-product-placeholder"
                                 style="display:none;"
                             >
-                                🌱
+                                ðŸŒ±
                             </div>
 
                         <?php else: ?>
 
                             <div class="pos-product-placeholder">
-                                🌱
+                                ðŸŒ±
                             </div>
 
                         <?php endif; ?>
@@ -3209,7 +3209,7 @@ function addProduct(
     if (source === 'barcode') {
 
         barcodeMessage(
-            '✓ ' +
+            'âœ“ ' +
             product.name +
             ' ditambahkan.',
             'success'
@@ -3568,7 +3568,7 @@ function renderCart()
                                 type="button"
                                 onclick="changeQty(${index}, -1)"
                             >
-                                −
+                                âˆ’
                             </button>
 
 
@@ -3591,7 +3591,7 @@ function renderCart()
                                 onclick="removeCart(${index})"
                                 title="Hapus"
                             >
-                                ×
+                                Ã—
                             </button>
 
                         </div>
@@ -3845,7 +3845,7 @@ function updatePayment()
 
             <div class="transfer-box">
 
-                💳 <strong>Debit</strong>
+                ðŸ’³ <strong>Debit</strong>
 
                 <br>
 
@@ -3863,7 +3863,7 @@ function updatePayment()
 
             <div class="transfer-box">
 
-                🏦 <strong>Transfer</strong>
+                ðŸ¦ <strong>Transfer</strong>
 
                 <br>
 
@@ -3873,7 +3873,7 @@ function updatePayment()
 
                 <br>
 
-                BRI • 1234-01-009876-53-2
+                BRI â€¢ 1234-01-009876-53-2
 
                 <br>
 
@@ -3945,7 +3945,7 @@ function showSystemNotice(title,message,type='warning',focusId=''){
     closeSystemModal();
     const modal=document.createElement('div');
     modal.id='posSystemModal'; modal.className='pos-system-modal '+type;
-    const icon=type==='danger'?'!':'✓';
+    const icon=type==='danger'?'!':'âœ“';
     modal.innerHTML=`<div class="pos-system-dialog" role="dialog" aria-modal="true" aria-labelledby="posSystemTitle"><div class="pos-system-icon">${icon}</div><h3 id="posSystemTitle">${escapeHtml(title)}</h3><p>${escapeHtml(message).replace(/\n/g,'<br>')}</p><div class="pos-system-actions" style="grid-template-columns:1fr;"><button type="button" class="pos-system-confirm" id="posSystemOk">Mengerti</button></div></div>`;
     document.body.appendChild(modal);
     const ok=document.getElementById('posSystemOk'); ok.focus();
@@ -3959,7 +3959,7 @@ function showOrderConfirmation(total,paid,receipt){
     const change=Math.max(0,paid-total);
     const methodLabel=paymentMethod==='cash'?'Tunai':(paymentMethod==='debit'?'Debit':'Transfer');
     const modal=document.createElement('div'); modal.id='posSystemModal'; modal.className='pos-system-modal';
-    modal.innerHTML=`<div class="pos-system-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmOrderTitle"><div class="pos-system-icon">✓</div><h3 id="confirmOrderTitle">Konfirmasi Pesanan</h3><p>Periksa kembali detail transaksi sebelum pesanan diproses.</p><div class="pos-confirm-list"><div class="pos-confirm-item"><span>Jumlah barang</span><strong>${totalQty} item</strong></div><div class="pos-confirm-item"><span>Metode pembayaran</span><strong>${escapeHtml(methodLabel)}</strong></div>${paymentMethod==='cash'?`<div class="pos-confirm-item"><span>Uang dibayar</span><strong>${rupiahJS(paid)}</strong></div><div class="pos-confirm-item"><span>Kembalian</span><strong>${rupiahJS(change)}</strong></div>`:''}<div class="pos-confirm-item pos-confirm-total"><span>Total transaksi</span><strong>${rupiahJS(total)}</strong></div></div><p style="font-size:10px;">Setelah dikonfirmasi, transaksi akan disimpan dan stok akan otomatis dikurangi.</p><div class="pos-system-actions"><button type="button" class="pos-system-cancel" id="cancelOrderConfirm">Periksa Lagi</button><button type="button" class="pos-system-confirm" id="confirmOrderButton">Ya, Proses Transaksi</button></div></div>`;
+    modal.innerHTML=`<div class="pos-system-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmOrderTitle"><div class="pos-system-icon">âœ“</div><h3 id="confirmOrderTitle">Konfirmasi Pesanan</h3><p>Periksa kembali detail transaksi sebelum pesanan diproses.</p><div class="pos-confirm-list"><div class="pos-confirm-item"><span>Jumlah barang</span><strong>${totalQty} item</strong></div><div class="pos-confirm-item"><span>Metode pembayaran</span><strong>${escapeHtml(methodLabel)}</strong></div>${paymentMethod==='cash'?`<div class="pos-confirm-item"><span>Uang dibayar</span><strong>${rupiahJS(paid)}</strong></div><div class="pos-confirm-item"><span>Kembalian</span><strong>${rupiahJS(change)}</strong></div>`:''}<div class="pos-confirm-item pos-confirm-total"><span>Total transaksi</span><strong>${rupiahJS(total)}</strong></div></div><p style="font-size:10px;">Setelah dikonfirmasi, transaksi akan disimpan dan stok akan otomatis dikurangi.</p><div class="pos-system-actions"><button type="button" class="pos-system-cancel" id="cancelOrderConfirm">Periksa Lagi</button><button type="button" class="pos-system-confirm" id="confirmOrderButton">Ya, Proses Transaksi</button></div></div>`;
     document.body.appendChild(modal);
     document.getElementById('cancelOrderConfirm').focus();
     document.getElementById('cancelOrderConfirm').addEventListener('click',closeSystemModal);

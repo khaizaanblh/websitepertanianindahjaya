@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 require_once __DIR__ . "/config/database.php";
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $error = "";
 $username = "";
@@ -1827,7 +1827,7 @@ elseif ($_SERVER["REQUEST_METHOD"] !== "POST") {
                             <div class="branch-selector-title">
 
                                 <span class="branch-selector-title-icon">
-                                    ▦
+                                    â–¦
                                 </span>
 
                                 <span>
@@ -1876,7 +1876,7 @@ elseif ($_SERVER["REQUEST_METHOD"] !== "POST") {
                                         >
                                             <?= esc($branch["name"]) ?>
                                             <?php if (!empty($branch["address"])): ?>
-                                                — <?= esc($branch["address"]) ?>
+                                                â€” <?= esc($branch["address"]) ?>
                                             <?php endif; ?>
                                         </option>
 
@@ -1889,7 +1889,7 @@ elseif ($_SERVER["REQUEST_METHOD"] !== "POST") {
                                     class="branch-select-arrow"
                                     aria-hidden="true"
                                 >
-                                    ▼
+                                    â–¼
                                 </span>
 
                             </div>
@@ -1904,7 +1904,7 @@ elseif ($_SERVER["REQUEST_METHOD"] !== "POST") {
                                     class="branch-info-icon"
                                     id="branchInfoIcon"
                                 >
-                                    ⌂
+                                    âŒ‚
                                 </span>
 
 
@@ -2198,7 +2198,7 @@ function updateBranchInfo()
             "Pilih salah satu cabang untuk melanjutkan.";
 
         if (iconElement) {
-            iconElement.textContent = "⌂";
+            iconElement.textContent = "âŒ‚";
         }
 
         return;
@@ -2224,7 +2224,7 @@ function updateBranchInfo()
     if (branch.phone) {
 
         if (detail !== "") {
-            detail += " • ";
+            detail += " â€¢ ";
         }
 
         detail +=
@@ -2244,7 +2244,7 @@ function updateBranchInfo()
 
 
     if (iconElement) {
-        iconElement.textContent = "✓";
+        iconElement.textContent = "âœ“";
     }
 
 }

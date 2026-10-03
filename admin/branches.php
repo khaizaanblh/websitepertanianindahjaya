@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../includes/auth.php";
 require_admin();
 
 require_once __DIR__ . "/../config/database.php";
 
-$base_url = "/kasir_pertanian";
+$base_url = get_base_url();
 
 $message = "";
 $error   = "";
@@ -958,7 +958,7 @@ require_once __DIR__ . "/../includes/header.php";
 >
 
     <div class="branch-notification-icon">
-        ✓
+        âœ“
     </div>
 
     <div class="branch-notification-content">
@@ -980,7 +980,7 @@ require_once __DIR__ . "/../includes/header.php";
         aria-label="Tutup notifikasi"
         title="Tutup"
     >
-        ×
+        Ã—
     </button>
 
 </div>
@@ -1020,7 +1020,7 @@ require_once __DIR__ . "/../includes/header.php";
         aria-label="Tutup notifikasi"
         title="Tutup"
     >
-        ×
+        Ã—
     </button>
 
 </div>
@@ -1363,7 +1363,7 @@ require_once __DIR__ . "/../includes/header.php";
                 onclick="closeBranchModal()"
                 aria-label="Tutup formulir"
             >
-                ✕
+                âœ•
             </button>
 
         </div>
@@ -1867,7 +1867,7 @@ function openBranchStatusModal(form)
             "Cabang yang diaktifkan kembali dapat digunakan untuk operasional, kas, dan transaksi sesuai hak akses.";
 
         icon.textContent =
-            "✓";
+            "âœ“";
 
         icon.className =
             "branch-confirm-icon activate";

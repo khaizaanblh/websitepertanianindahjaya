@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require_once __DIR__ . "/../config/database.php";
 require_once __DIR__ . "/../includes/auth.php";
@@ -1275,7 +1275,7 @@ require_once __DIR__ . "/../includes/header.php";
         <div class="panel open-shift-box">
 
             <div class="open-shift-icon">
-                💼
+                ðŸ’¼
             </div>
 
             <h3>Buka Shift Kasir</h3>
@@ -1394,7 +1394,7 @@ require_once __DIR__ . "/../includes/header.php";
                 </div>
 
                 <div class="shift-branch">
-                    🏢 <?= htmlspecialchars($branch_name) ?>
+                    ðŸ¢ <?= htmlspecialchars($branch_name) ?>
                 </div>
 
             </div>
@@ -1546,7 +1546,7 @@ require_once __DIR__ . "/../includes/header.php";
                         </span>
 
                         <strong style="color:#d94a4a;">
-                            − <?= rupiah($cash_out) ?>
+                            âˆ’ <?= rupiah($cash_out) ?>
                         </strong>
 
                     </div>
@@ -1901,7 +1901,7 @@ require_once __DIR__ . "/../includes/header.php";
                                     <?php elseif ($difference < 0): ?>
 
                                         <span class="diff-negative">
-                                            − <?= rupiah(abs($difference)) ?>
+                                            âˆ’ <?= rupiah(abs($difference)) ?>
                                         </span>
 
                                     <?php else: ?>
