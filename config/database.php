@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $host = getenv('DB_HOST') ?: 'localhost';
 $user = getenv('DB_USER') ?: 'root';
